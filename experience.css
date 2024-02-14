@@ -1,0 +1,173 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* Timeline */
+
+.timeline {
+    position: relative;
+    width: 100%; /* Ensure the timeline takes full width */
+    max-width: 1200px; /* Optional: max-width for large screens */
+    margin: auto; /* This centers the timeline if a max-width is set */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%; /* Centers the line - make sure this is 50% */
+    transform: translateX(-50%); /* This ensures the line is centered by moving it left by half its width */
+    height: 100%;
+    width: 2px; /* Width of the timeline line */
+    background: #c5c5c5; /* Color of the line */
+    z-index: 1;
+}
+
+.timeline-block {
+    position: relative;
+    width: calc(50% - 20px); /* Adjust the width of blocks to account for marker width */
+    padding: 20px;
+    clear: both;
+}
+
+.timeline-block .marker {
+    position: absolute;
+    top: 10px;
+    left: calc(-30px / 2); /* Half the size of the marker for centering */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #c5c5c5;
+    z-index: 2;
+    transform: translateX(-50%); /* Ensures the marker is centered to the line */
+}
+
+.timeline-block-right .timeline-content {
+    margin-left: 30px; /* Adjust as needed for spacing from the line */
+}
+
+.timeline-block-left .timeline-content {
+    margin-right: 30px; /* Adjust as needed for spacing from the line */
+}
+
+/* Add this class if you want to alternate the blocks on the left */
+.timeline-block-left {
+    float: left;
+}
+
+.timeline-block-left .marker {
+    left: auto; /* Override the left positioning */
+    right: calc(-30px / 2); /* Center the marker to the right side of the block */
+    transform: translateX(50%); /* Ensures the marker is centered to the line */
+}
+
+/* Content styles remain the same */
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background: #c5c5c5; /* Line color */
+    z-index: 1;
+}
+
+.timeline-block {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    clear: both;
+}
+
+.timeline-block-right {
+    float: right;
+}
+
+.timeline-block .marker {
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #c5c5c5;
+    z-index: 2;
+}
+
+.timeline-content {
+    position: relative;
+    margin-bottom: 40px;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.timeline-content .date {
+    font-size: 0.7em;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.timeline-content h4 {
+    font-size: 1em;
+    color: #303030;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-content ul li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.timeline-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #c5c5c5;
+}
+
+/* Clear floats after the blocks */
+.timeline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Add additional responsive styles as necessary */

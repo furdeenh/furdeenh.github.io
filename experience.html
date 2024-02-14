@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Furdeen Hasan</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="#projects.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Furdeen Hasan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#index.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience.html" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+<section class="timeline">
+    <!-- Repeat this block for each experience entry -->
+    <div class="timeline-block timeline-block-right">
+        <div class="marker"></div>
+        <div class="timeline-content">
+            <h3>UNIVERSITY OF DELAWARE</h3>
+            <span class="date">May 2023 - Present</span>
+            <h4>Office of Academic Enrichment - Tutor</h4>
+            <ul>
+                <li>Offered academic support in math, science, engineering, and writing courses to undergraduate students.</li>
+                <li>Ensured high academic standards by maintaining a self-grade of B+ or higher in all subjects tutored.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- More entries here -->
+
+</section>
+
+<footer>
+    <!-- Your footer content goes here -->
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -7,6 +7,30 @@
   padding: 0;
 }
 
+<! --
+ .header {
+  background-color: #4CAF50; /* Replace with your desired color */
+  color: white; /* Adjust text color as needed */
+  padding: 10px 0; /* Adjust padding as needed */
+  text-align: center; /* Aligns the text to the center, if you have a title or something similar in the header */
+}
+
+/* Style for the navigation links inside the header, if needed */
+.header nav a {
+  color: white; /* Ensures that the nav links are also white */
+  padding: 0 15px; /* Adjust as needed */
+  text-decoration: none; /* Removes underline from links */
+}
+
+/* Hover effect for nav links */
+.header nav a:hover {
+  color: #333; /* Dark color for hover effect */
+  text-decoration: underline; /* Adds underline on hover */
+} 
+-->
+
+
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -261,3 +285,115 @@ section {
   gap: 1rem;
 }
 
+
+/* EXPERIENCE */
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centers the line */
+  height: 100%;
+  width: 2px;
+  background: #c5c5c5; /* Line color */
+  z-index: 1;
+}
+
+.timeline-block {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  clear: both;
+}
+
+.timeline-block-right {
+  float: right;
+}
+
+.timeline-block .marker {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Centers the marker */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #c5c5c5;
+  z-index: 2;
+}
+
+.timeline-content {
+  position: relative;
+  margin-bottom: 40px;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.timeline-content .date {
+  font-size: 0.9em;
+  color: #999999;
+  margin-bottom: 10px;
+}
+
+.timeline-content h4 {
+  font-size: 1.2em;
+  color: #303030;
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-content ul li {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.timeline-content ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #c5c5c5;
+}
+
+/* Clear floats after the blocks */
+.timeline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .timeline-block,
+  .timeline-block-right {
+    width: 100%;
+  }
+  
+  .timeline-block .marker,
+  .timeline-block-right .marker {
+    left: 10px; /* Adjust marker position for mobile */
+    transform: translateX(0%);
+  }
+  
+  .timeline-content {
+    margin-left: 30px; /* Adjust content position for mobile */
+  }
+}

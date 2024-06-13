@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furdeen Hasan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Furdeen Hasan</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Furdeen Hasan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img 
+        src="./assets/Profile_Pic_FurdeenH.png" 
+        alt="Furdeen Hasan profile picture" 
+        class="shadowed-image"
+        
+        />
+      </div>
+      <div class="section__text">
+        <h1 class="title">Furdeen Hasan</h1>
+        <p class="section__text__p2">Computer Engineering Student</p>
+        <p class="section__text__p1">University of Delaware</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/FH_Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/LInlogo.png"
+            alt="My LinkedIn profile"
+            class="lIN_logo"
+            onclick="location.href='https://www.linkedin.com/in/furdeenhasan/'" 
+          />
+          <img
+            src="./assets/githublogo.png"
+            alt="My Github profile"
+            class="gh_logo"
+            onclick="window.open('https://github.com/furdeenh', '_blank')"
+          />
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="about">
+      <p class="section__text__p3">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/pro_pic_2.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Lab Assistant</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Computer Engineering (grad. 2025)<br />Minor Computer Science</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <col>
+              Hello, I'm Furdeen, a senior at the University of Delaware pursuing a 
+              Bachelor of Science in Computer Engineering and a minor in Computer Science. 
+              I am passionate about applying my technical skills to create innovative solutions for real-world problems.
+              I have completed various projects in IoT, such as designing a smart home system and a wearable health monitor, 
+              using Arduino, Raspberry Pi, and Python. I have also excelled in advanced math and science courses, earning multiple 
+              Dean's List honors and a certification in Diversity, Equity and Inclusion for Students. 
+
+          </col>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+
+    <section id="experience">
+      <p class="section__text__p3">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Languages</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Software</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Cadence</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Visual Studio</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+
+   <section id="projects">
+   <p class="section__text__p3">Browse My Recent</p>
+   <h1 class="title">Projects</h1>
+   <div class="experience-details-container">
+    <div class="about-containers">
+    <div class="details-container color-container">
+      <div class="article-container">
+        <img src="./assets/project-1.png" alt="Project 1"
+        alt="Project 1"
+        class="project-img"
+        />
+      </div>
+      <h2 class="experience-sub-title project project-title"> IoT: Acceleration and Temperature Sensor </h2>
+      <div class="btn-container">
+
+        <button 
+        class="btn btn-color-2 project-btn" 
+        onclick="location .href='https://github.com/' ">
+          Github
+        </button>
+       
+        <button 
+        class="btn btn-color-2 project-btn" 
+        onclick="location .href='https://github.com/' ">
+          Live Demo
+        </button>
+       
+
+
+      </div>
+
+
+    </div>
+
+    <div class="details-container color-container">
+      <div class="article-container">
+        <img src="./assets/project-2.png" alt="Project 2"
+        alt="Project 2"
+        class="project-img"
+        />
+      </div>
+      <h2 class="experience-sub-title project project-title">Project One</h2>
+      <div class="btn-container">
+
+        <button 
+        class="btn btn-color-2 project-btn" 
+        onclick="location .href='https://github.com/' ">
+          Github
+        </button>
+       
+        <button 
+        class="btn btn-color-2 project-btn" 
+        onclick="location .href='https://github.com/' ">
+          Live Demo
+        </button>
+       
+
+
+      </div>
+
+
+    </div>
+
+    <div class="details-container color-container">
+      <div class="article-container">
+        <img src="./assets/project-3.png" alt="Project 3"
+        alt="Project 3"
+        class="project-img"
+        />
+      </div>
+      <h2 class="experience-sub-title project project-title">Advanced Path-Tracking Autonomous Robot </h2>
+      <div class="btn-container">
+
+        <button 
+        class="btn btn-color-2 project-btn" 
+        onclick="location .href='https://github.com/' ">
+          Github
+        </button>
+       
+        <button 
+        class="btn btn-color-2 project-btn" 
+        onclick="location .href='https://github.com/' ">
+          Live Demo
+        </button>
+       
+
+
+      </div>
+
+
+    </div>
+
+
+   </div>
+  </div>
+
+
+   <img
+   src="./assets/arrow.png"
+   alt="Arrow icon"
+   class="icon arrow"
+   onclick="location.href='./#projects'" />
+
+
+
+
+
+   </section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

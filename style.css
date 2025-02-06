@@ -372,6 +372,7 @@ section {
 
 
 
+/* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
@@ -410,6 +411,12 @@ article .icon {
   cursor: default;
 }
 
+/* .exp_sub{
+  color: blue;
+  font-weight: 300;
+  font-size: 0.5rem;
+  margin-bottom: 2rem;
+} */
 
 
 /* PROJECTS SECTION */

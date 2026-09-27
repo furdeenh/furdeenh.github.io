@@ -1,0 +1,146 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-fog: var(--fog);
+  --font-display: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-condensed: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --radius: 0rem;
+  /* Vide Infra inspired: neutral studio greys, near-black type, single accent */
+  --background: oklch(0.99 0 0);              /* white */
+  --foreground: oklch(0.17 0 0);              /* near black */
+  --fog: oklch(0.855 0 0);                    /* signature light grey canvas */
+  --paper: oklch(0.99 0 0);
+  --ink: oklch(0.13 0 0);
+  --card: oklch(0.965 0 0);
+  --card-foreground: oklch(0.17 0 0);
+  --popover: oklch(0.99 0 0);
+  --popover-foreground: oklch(0.17 0 0);
+  --primary: oklch(0.17 0 0);                 /* black is the primary action */
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.93 0 0);
+  --secondary-foreground: oklch(0.17 0 0);
+  --muted: oklch(0.93 0 0);
+  --muted-foreground: oklch(0.48 0 0);
+  --accent: oklch(0.6 0.23 29);               /* signal red, used sparingly */
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.6 0.23 29);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0 0 0 / 12%);
+  --input: oklch(0 0 0 / 14%);
+  --ring: oklch(0.17 0 0);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.035em; }
+  .font-condensed { font-family: var(--font-condensed); }
+  .font-mono { font-family: var(--font-mono); }
+
+  .tracking-tightest { letter-spacing: -0.045em; }
+
+  /* Signature light-grey studio canvas */
+  .panel-fog { background-color: var(--fog); color: var(--ink); }
+
+  /* Inverted band, mirrors the dark image sections of the reference */
+  .panel-dark {
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+  }
+  .panel-dark .text-foreground { color: #f5f5f5; }
+  .panel-dark .text-muted-foreground { color: #9a9a9a; }
+  .panel-dark .bg-card,
+  .panel-dark .bg-card\/50,
+  .panel-dark .bg-card\/60 { background-color: #141414; }
+  .panel-dark [class*="border-black/"] { border-color: rgba(255, 255, 255, 0.14); }
+  .panel-dark .border-y,
+  .panel-dark .border-t,
+  .panel-dark .border-b,
+  .panel-dark .border,
+  .panel-dark .border-l { border-color: rgba(255, 255, 255, 0.14); }
+  .panel-dark .bg-primary { background-color: #f5f5f5; color: #0b0b0b; }
+  .panel-dark .text-primary { color: #f5f5f5; }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+  .panel-dark .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-underline:hover { background-size: 100% 1px; }
+
+  .reveal-up { animation: reveal-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  @keyframes reveal-up {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: none; }
+  }
+}
